@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router'
 import {SidebarComponent} from "@syncfusion/ej2-react-navigations";
+import NavItems from './NavItems';
 
 const MobileSizeBar = () => {
     let sidebar: SidebarComponent;
@@ -23,8 +24,14 @@ const MobileSizeBar = () => {
 
 <SidebarComponent width={270}
  //@ts-ignore
-ref={(Sidebar) =>Sidebar =sidebar}>
+ref={(Sidebar) =>Sidebar =sidebar}
+created={() => sidebar.hide()}
+closeOnDocumentClick={true}
+showBackdrop={true}
+type="over"
 
+>
+<NavItems  />
 </SidebarComponent>
     </div>
   )
