@@ -1,10 +1,11 @@
 import React from 'react'
+import Header from '~/components/header'
 
 const dashboard = () => {
   return (
-    <div>
-      dashboard
-    </div>
+  <main className='dashboard wrapper'>
+    <Header  />
+  </main>
   )
 }
 
