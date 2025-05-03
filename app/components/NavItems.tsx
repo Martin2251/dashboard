@@ -1,8 +1,18 @@
 import React from 'react'
 import { Link, NavLink } from 'react-router'
 import { sidebarItems } from '~/constants'
+import { cn } from '~/lib/utils'
 
 const NavItems = () => {
+
+    const user = {
+        name:'martin',
+        email:'contact@martin.com',
+        imageUrl:'/assets/images/david/webp'
+
+
+
+    }
   return (
    <section className='nav-items'> 
         <Link to="/" className="link-logo" >
@@ -17,7 +27,7 @@ const NavItems = () => {
                             {({ isActive }: { isActive: boolean }) => (
                                 <div className={cn('group nav-item', {
                                     'bg-primary-100 !text-white': isActive
-                                })} onClick={handleClick}>
+                                })}  >
                                     <img
                                         src={icon}
                                         alt={label}
@@ -29,6 +39,14 @@ const NavItems = () => {
                         </NavLink>
                     ))}
                 </nav>
+                <footer className='nav-footer'>
+                    <img src={user?.imageUrl || 'images/assets/images.david.webp'}  />
+                    <article>
+                       <h2>{user?.name}</h2> 
+                       <p>{user?.email}</p>
+                    </article>
+
+                </footer>
         </div>
    </section>
   )
