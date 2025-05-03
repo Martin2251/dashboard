@@ -1,3 +1,5 @@
+// @ts-nocheck
+
 import React from 'react'
 import { Link } from 'react-router'
 import {SidebarComponent} from "@syncfusion/ej2-react-navigations";
@@ -23,8 +25,8 @@ const MobileSizeBar = () => {
         </header>
 
 <SidebarComponent width={270}
- //@ts-ignore
-ref={(Sidebar) =>Sidebar =sidebar}
+
+ref={(Sidebar) =>sidebar =Sidebar}
 created={() => sidebar.hide()}
 closeOnDocumentClick={true}
 showBackdrop={true}
