@@ -15,9 +15,16 @@ const dashboard = () => {
   <main className='dashboard wrapper'>
     <Header   title={`Welcome ${user?.name ?? 'Guesr'}`} description="track in real time"/>
     <section className='flex flex-col gap-6'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full'>
+        <StatsCard  headerTitle='Total Users'
+        total={dashboardStats.totalUsers}
+        currentMonthCount={dashboard}
+
+        />
+        </div>
 
     </section>
-    <StatsCard  />
+   
 <TripCard />
   </main>
   )
