@@ -24,6 +24,24 @@ const dashboard = () => {
         lastMonthCount={usersJoined.lastMonth}
 
         />
+          <StatsCard  headerTitle='Total Users'
+        total={totalUsers}
+        currentMonthCount={usersJoined.currentMonth}
+        lastMonthCount={usersJoined.lastMonth}
+
+        />
+          <StatsCard  headerTitle='Total Trips'
+        total={totalUsers}
+        currentMonthCount={usersJoined.currentMonth}
+        lastMonthCount={usersJoined.lastMonth}
+
+        />
+            <StatsCard  headerTitle='Total Trips'
+        total={userRole.total}
+        currentMonthCount={userRole.currentMonth}
+        lastMonthCount={userRole.lastMonth}
+
+        />
         </div>
 
     </section>
