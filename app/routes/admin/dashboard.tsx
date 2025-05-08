@@ -10,6 +10,8 @@ const dashboardStats={
     userRole:{total:63, currentMonth:16, lastMonth:10}
 }
 
+const { totalUsers,usersJoined,totalTrips,tripsCreated,userRole } = dashboardStats;
+
 const dashboard = () => {
   return (
   <main className='dashboard wrapper'>
@@ -17,8 +19,9 @@ const dashboard = () => {
     <section className='flex flex-col gap-6'>
         <div className='grid grid-cols-1 md:grid-cols-3 gap-6 w-full'>
         <StatsCard  headerTitle='Total Users'
-        total={dashboardStats.totalUsers}
-        currentMonthCount={dashboard}
+        total={totalUsers}
+        currentMonthCount={usersJoined.currentMonth}
+        lastMonthCount={usersJoined.lastMonth}
 
         />
         </div>
